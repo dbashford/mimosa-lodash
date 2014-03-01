@@ -9,10 +9,10 @@ exports.defaults = function() {
 };
 
 exports.placeholder = function() {
-  return "\t\n\n"+
-         "  # lodash:               # config settings for the Lodash compiler module\n" +
-         "    # lib: undefined    # use this property to provide a specific version of Lodash\n" +
-         "    # extensions: [\"tmpl\", \"lodash\"],  # default extensions for Lodash files\n";
+  return "\t\n\n" +
+         "  lodash:               # config settings for the Lodash compiler module\n" +
+         "    lib: undefined    # use this property to provide a specific version of Lodash\n" +
+         "    extensions: [\"tmpl\", \"lodash\"],  # default extensions for Lodash files\n";
 };
 
 exports.validate = function( config, validators ) {
@@ -21,7 +21,7 @@ exports.validate = function( config, validators ) {
   if ( validators.ifExistsIsObject( errors, "lodash config", config.lodash ) ) {
 
     if ( !config.lodash.lib ) {
-      config.lodash.lib = require( 'lodash' );
+      config.lodash.lib = require( "lodash" );
     }
 
     if ( validators.isArrayOfStringsMustExist( errors, "lodash.extensions", config.lodash.extensions ) ) {
@@ -33,6 +33,3 @@ exports.validate = function( config, validators ) {
 
   return errors;
 };
-
-
-
