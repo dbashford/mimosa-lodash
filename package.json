@@ -1,6 +1,6 @@
 {
   "name": "mimosa-lodash",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/dbashford/mimosa-lodash",
   "author": "David Bashford",
   "description": "A Lodash client template compiler for Mimosa 2.0+",
